@@ -60,7 +60,7 @@ public class CustomList extends ArrayAdapter<City> {
 
     public boolean hasCity(City city) {
         for (int i = 0; i < cities.size(); i++) {
-            if (city == cities.get(i)){
+            if (city.getCityName() == cities.get(i).getCityName() && city.getProvinceName() == cities.get(i).getProvinceName()){
                 return true;
             }
         }
