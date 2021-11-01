@@ -16,10 +16,17 @@ public class CustomListTest {
         list = new CustomList(null, new ArrayList<City>());
     }
 
+    /*
     @Test
     public void addCityTest() {
         int listSize =  list.getCount();
         list.addCity(new City("Edmonton", "Alberta"));
         assertEquals(listSize + 1, list.getCount());
+    } */
+
+    @Test
+    public void hasCityTest() {
+        list.addCity(new City("Edmonton", "Alberta"));
+        assert(list.hasCity(new City("Calgary", "Alberta")));
     }
 }
